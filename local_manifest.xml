@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-<remote name="github"
-        fetch="https://github.com/" />       
-
-  <!-- Removals -->
   
-        
-  <!-- Device -->
-  <project name="Sonic-sakthivel123/android_device_samsung_i9300" path="device/samsung/i9300" remote="github" revision="dot-p" />
-  <project name="Sonic-sakthivel123/android_device_samsung_smdk4412-common" path="device/samsung/smdk4412-common" remote="github" revision="dot-p" />
 
-  <!-- Kernel -->
-  <project name="ChronoMonochrome/android_kernel_samsung_smdk4412" path="kernel/samsung/smdk4412" remote="github" revision="lineage-16.0" />
+  <remote  name="Galaxy-MSM8916"
+           fetch="https://github.com"
+           review="review.msm8916.com"
+           revision="lineage-16.0" />
 
-  <!-- Vendor -->
-  <project name="CustomROMs/android_vendor_samsung_i9300" path="vendor/samsung/i9300" remote="github" revision="lineage-16.0" />  
-  <project name="CustomROMs/android_vendor_samsung_smdk4412-common" path="vendor/samsung/smdk4412-common" remote="github" revision="lineage-16.0" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
 
-  <!-- Extras -->
-  <project name="dot-i9300/android_vendor_dot" path="vendor/dot" remote="github" revision="dot-p" />
-  <project name="dot-i9300/android_hardware_samsung" path="hardware/samsung" remote="github" revision="dot-p" />
-  <project name="linusdan/android_packages_apps_SamsungServiceMode" path="packages/apps/SamsungServiceMode" remote="github" revision="lineage-16.0" />      
+  <!-- Samsung Hardware Repo -->
+  <project path="hardware/samsung" name="Exodusnick/android_hardware_samsung_j5xnlte" remote="github" revision="lineage-16.0" />
+  
+  <!-- Samsung MSM8916 Common Repos -->
+  <project path="device/samsung/qcom-common" name="Exodusnick/android_device_samsung_qcom-common_j5xnlte" remote="github" revision="lineage-16.0" />
+  <project path="device/samsung/msm8916-common" name="Exodusnick/android_device_samsung_msm8916-common" remote="github" revision="lineage-16.0" />
+  
+  <!-- (J510FN - j5xnlte) -->
+  <project path="device/samsung/j5x-common" name="Exodusnick/android_device_samsung_j5x-common" remote="github" revision="lineage-16.0" /> 
+  <project path="device/samsung/j5xnlte" name="Exodusnick/android_device_samsung_j5xnlte" remote="github" revision="pie" />
+  
+  <!-- arm-eabi-7.2 -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.2" name="Galaxy-MSM8916/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2" groups="pdk,linux,arm"  remote="github" revision="master"/>
+  
+  <!-- Dependencies -->
+  <remove-project name="LineageOS/android_hardware_qcom_audio"/>
+  <project path="hardware/qcom/audio-caf/msm8916" name="Galaxy-MSM8916/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk" revision="lineage-16.0-caf-8916" />
+  <project path="external/sony/boringssl-compat" name="LineageOS/android_external_sony_boringssl-compat" remote="github" revision="lineage-16.0" />
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-16.0" />  
+  
+  <!-- Common Samsung MSM8916 Kernel -->
+  <project path="kernel/samsung/msm8916" name="Exodusnick/android_kernel_samsung_msm8916" remote="github" revision="lineage-16.0-oc"/>
+  
+  <!-- Vendor Trees For All Device Trees -->
+  <project path="vendor/samsung" name="Galaxy-MSM8916/proprietary_vendor_samsung" groups="device" remote="Galaxy-MSM8916"/>
+
 </manifest>
