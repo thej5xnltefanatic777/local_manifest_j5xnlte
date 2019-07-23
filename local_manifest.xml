@@ -18,8 +18,8 @@
   <project path="device/samsung/msm8916-common" name="Exodusnick/android_device_samsung_msm8916-common" remote="github" revision="lineage-16.0" />
   
   <!-- (J510FN - j5xnlte) -->
-  <project path="device/samsung/j5x-common" name="Exodusnick/android_device_samsung_j5x-common" remote="github" revision="lineage-16.0" /> 
-  <project path="device/samsung/j5xnlte" name="Exodusnick/android_device_samsung_j5xnlte" remote="github" revision="pie" />
+  <project path="device/samsung/j5x-common" name="Sonic-sakthivel123/android_device_samsung_j5x-common" remote="github" revision="lineage-16.0" /> 
+  <project path="device/samsung/j5xnlte" name="latvianguy18/android_device_samsung_j5xnlte" remote="github" revision="lineage-16.0" />
   
   <!-- arm-eabi-7.2 -->
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-7.2" name="Galaxy-MSM8916/android-prebuilts-gcc-linux-x86-arm-arm-eabi-7.2" groups="pdk,linux,arm"  remote="github" revision="master"/>
